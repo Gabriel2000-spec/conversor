@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #423d3df7;
+    color: #fffc15d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10;
+}
+
+.container {
+    text-align: center;
+    background-color: #9e5400d5;
+    padding: 0px;
+    border-radius: 08px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.conversion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      color: #fffc15d5
+    
+}
+
+.currency {
+    margin: 0 10px;
+}
+
+.arrow {
+    font-size: 25px;
+}
+
+input {
+    padding: 10px;
+    border: true;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    color: black;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: true;
+    border-radius: 10px;
+    background-color: #ffb355fc;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+.rates {
+    margin-top: 50px;
+}
+    
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        
+        
+        body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+        
+     
+        body {
+        background-image: url('img/fondo.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 95vw;
+    }
+        
+            
+</style>
+
+    <div class="container">
+       
+       
+       <th style="color: white;">Viernes 21 - 02 - 2025 USD 63.20</th>
+       
+       <br>
+       <br>
+        
+        <div class="conversion">
+            <div class="currency">
+                <h3> Bolívar venezolano  <br> 🇻🇪</h3>
+                <input type="number" id="bolivares" placeholder="Bs. 0" />
+            </div>
+            <div class="arrow">⇄</div>
+            <div class="currency">
+                <h3>Dólar estadounidense<br>🇺🇸</h3>
+                <input type="number" id="dolares" placeholder="$ 0" disabled />
+            </div>
+        </div>
+        <button id="convertBtn">Convertir</button>
+        <div class="rates">
+            
+       
+          
+    </div>
+     
+    <script> document.getElementById('convertBtn').addEventListener('click', function() {
+    const bolivares = parseFloat(document.getElementById('bolivares').value);
+    const exchangeRate = 0077; // Tasa de cambio de bolívares a dólares
+    const dolares = bolivares / exchangeRate;
+
+    document.getElementById('dolares').value = dolares.toFixed(2);
+});
+
+    function convertirDivisa() {
+        const dolar = document.getElementById('dolarInput').value;
+        const tasaCambio = 63.20; // Tasa de cambio actual (1 USD = 63.20 VES)
+        const resultado = dolar * tasaCambio;
+        document.getElementById('resultado').innerText = `El monto en bolívares es: ${resultado} bs`;
+    }
+
+
+</script>
+</head>
+<body>
+<h2>Dólar a Bolívar</h2>
+<input type="number" id="dolarInput" placeholder="Ingresar en $">
+<button onclick="convertirDivisa()">Convertir</button>
+<p id="resultado"></p>
+
+</body>
+</html>
+
